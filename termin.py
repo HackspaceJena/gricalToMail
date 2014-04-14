@@ -32,7 +32,7 @@ class Termin(object):
         datum = self.value["DTSTART"]
         # wenn keine Zeitzone angeben ist, nehme UTC an
         if not datum.tzinfo:
-            src_zone = pytz.timezone("UTC")
+            src_zone = pytz.timezone("Europe/Berlin")
             datum = src_zone.localize(datum)
         # und jetzt umwandeln
         dst_zone = pytz.timezone("Europe/Berlin")
